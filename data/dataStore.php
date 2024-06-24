@@ -3,23 +3,29 @@ include __DIR__ . "/dataCategory.php";
 include __DIR__ . "/dataProducts.php";
 
 
-class Catalogo
+class oggettoCatalogo
  {  
-     public $categoria;
-     public $prodotto;
-     public function __construct(Categoria $categoria, Prodotto $prodotto)
+     public $nome;
+     public $price;
+     public function __construct($nome, $price)
      {
-         $this->categoria = $categoria;
-         $this->prodotto = $prodotto;
+         $this->nome = $nome;
+         $this->price = $price;
      }
-     public function print()
-     {
-         return $this->prodotto->food ;
-    }
 }
-$Products = [
-     new Catalogo(new Categoria("nome_categoria", "icona_categoria"), new Prodotto("food","toy","pethouse")),
-     new Catalogo(new Categoria("nome_categoria", "icona_categoria"), new Prodotto("food","toy","pethouse"))
-     ];
+$Catalogo = [
+    new Prodotto("petHouse",new Categoria("cane","icona_categoria"),"nome","prezzo"),
+    new Prodotto("cibo",new Categoria("gatto","icona_categoria"),"nome","prezzo"),
+    new Prodotto("petHouse",new Categoria("cane","icona_categoria"),"nome","prezzo"),
+    new Prodotto("toys",new Categoria("gatto","icona_categoria"),"nome","prezzo"),
+    new Prodotto("petHouse",new Categoria("cane","icona_categoria"),"nome","prezzo"),
+    new Prodotto("petHouse",new Categoria("cane","icona_categoria"),"nome","prezzo"),
+    new Prodotto("petHouse",new Categoria("cane","icona_categoria"),"nome","prezzo"),
+    new Prodotto("toys",new Categoria("gatto","icona_categoria"),"nome","prezzo"),
+    new Prodotto("cibo",new Categoria("cane","icona_categoria"),"nome","prezzo"),
+    new Prodotto("cibo",new Categoria("gatto","icona_categoria"),"nome","prezzo"),
+    new Prodotto("petHouse",new Categoria("cane","icona_categoria"),"nome","prezzo"),
+    new Prodotto("toys",new Categoria("gatto","icona_categoria"),"nome","prezzo"),
+];
 
 

@@ -24,20 +24,27 @@ include __DIR__ . "/data/dataStore.php";
         <h1>OOP-2</h1>
     </header>
     <main class="container">
-        <section>
-
-            <h5>###</h5>
-            <pre>
-        <?= var_dump($Products) ?>
-    </pre>
-
-
-
-    <ul>
-        <?php foreach ($Products as $prodotto) {
-            echo "<li>" . $prodotto->print() . "</li>";
-        }?>
-    </ul>
+        <section class="d-flex flex-wrap">
+            <h5 class="col-12 text-center my-4">E-commerce Animal Prducts PHP</h5>
+            <?php foreach ($Catalogo as $prodotto) { ?>
+                <div class="col-3 myCard d-flex flex-wrap p-2">
+                    <h2 class="col-12 text-center">
+                        <?= $prodotto->nome  ?>
+                    </h2> 
+                    <p class="col-6 off-set-6 text-start">
+                         <?= $prodotto->whatIs  ?>
+                    </p> 
+                    <h6 class="col-4 off-set-8 text-end">
+                         <?= $prodotto->price  ?>
+                    </h6> 
+                    <h5 class="col-12 text-center">
+                         <?= $prodotto->category->nome  ?>
+                    </h5> 
+                    <h6 class="col-12 text-end">
+                         <?= $prodotto->category->icona  ?>
+                    </h6> 
+                </div>
+            <?php } ?>
         </section>
     </main>
     <!-- <script src="./js/main.js"></script> -->

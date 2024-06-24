@@ -5,3 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.myCard{
+    border: 1px inset greenyellow;
+    border-radius: 12px;
+}

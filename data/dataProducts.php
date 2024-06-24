@@ -1,15 +1,11 @@
 <?php
-class Prodotto {
-
-    public $food;
-    public $toys;
-    public $petHouse;
-
-    public function __construct($food, $toys, $petHouse)
+class Prodotto extends oggettoCatalogo {
+    public $whatIs;
+    public $category;
+    public function __construct($whatIs,Categoria $category,$nome,$price)
     {
-      $this->food = $food;
-      $this->toys = $toys;
-      $this->petHouse = $petHouse;
+      parent::__construct($nome,$price);
+      $this->whatIs = $whatIs;
+      $this->category = $category;
     }
-
 }
