@@ -1,5 +1,6 @@
 <?php
-include __DIR__ . "/model/####.php";
+include __DIR__ . "/data/dataStore.php";
+
 
 
 ?>
@@ -24,12 +25,12 @@ include __DIR__ . "/model/####.php";
     </header>
     <main class="container">
         <section>
-            <ul>
-                <h5>###</h5>
-                <?php foreach ($array as $element) { ?>
-                    <li><?= $element ?></li>
-                <?php } ?>
-            </ul>
+
+            <h5>###</h5>
+            <pre>
+        <?= var_dump($Products) ?>
+    </pre>
+
         </section>
     </main>
     <!-- <script src="./js/main.js"></script> -->
