@@ -1,24 +1,25 @@
 <?php
-include __DIR__ . "/dataDogs.php";
+include __DIR__ . "/dataCategory.php";
+include __DIR__ . "/dataProducts.php";
 
 
-class Categoria
+class Catalogo
  {  
-     public $species;
+     public $categoria;
      public $prodotto;
-     public function __construct($species, Prodotto $prodotto)
+     public function __construct(Categoria $categoria, Prodotto $prodotto)
      {
-         $this->species = $species;
+         $this->categoria = $categoria;
          $this->prodotto = $prodotto;
      }
      public function print()
      {
-         return $this->species->food ;
+         return $this->prodotto->food ;
     }
 }
 $Products = [
-     new Categoria("Dogs", new Prodotto("food","toy","pethouse")),
-     new Categoria("Cats", new Prodotto("food","toy","pethouse"))
+     new Catalogo(new Categoria("nome_categoria", "icona_categoria"), new Prodotto("food","toy","pethouse")),
+     new Catalogo(new Categoria("nome_categoria", "icona_categoria"), new Prodotto("food","toy","pethouse"))
      ];
 
 

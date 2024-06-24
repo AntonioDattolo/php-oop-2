@@ -1,5 +1,5 @@
 <?php
-class Prodotto  {
+class Prodotto {
 
     public $food;
     public $toys;

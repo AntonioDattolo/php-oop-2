@@ -31,6 +31,13 @@ include __DIR__ . "/data/dataStore.php";
         <?= var_dump($Products) ?>
     </pre>
 
+
+
+    <ul>
+        <?php foreach ($Products as $prodotto) {
+            echo "<li>" . $prodotto->print() . "</li>";
+        }?>
+    </ul>
         </section>
     </main>
     <!-- <script src="./js/main.js"></script> -->
