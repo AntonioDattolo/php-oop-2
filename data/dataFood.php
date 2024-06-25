@@ -9,12 +9,8 @@ class Food extends Prodotto {
       
     }
 
-    public function getWeight(){
-        return "peso:" . $this->peso;
-    }
-
-    public function getValue(){
-        return "Valore Nutrizionale:" . $this->valori_nutrizionali;
+    public function print(){
+        return "<span>" . "Peso:" . $this->peso . "</span>" . " " . "<span>" . "Valore Nutrizionale:" . $this?->valori_nutrizionali . "</span>";
     }
 
 }

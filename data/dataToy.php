@@ -9,12 +9,8 @@ class Toy extends Prodotto {
       
     }
 
-    public function getDimension(){
-        return "Alimentazione:" . $this->alimentazione;
-    }
-
-    public function getHouseMaterials(){
-        return "Materiali:" . $this->materiali;
+    public function print(){
+        return "<span>" . "Alimentazione:" . $this->alimentazione . "</span>" .  " " . "<span>" . "Materiali:" . $this->materiali . "</span>";
     }
 
 }

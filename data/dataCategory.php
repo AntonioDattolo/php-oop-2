@@ -11,7 +11,10 @@ class Category {
       $this->icona = $icona;
       
     }
-
+    public function getCategory()  {
+      return $this->nome;
+      
+    }
     
 
 }

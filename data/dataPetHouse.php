@@ -9,12 +9,8 @@ class PetHouse extends Prodotto {
       
     }
 
-    public function getDimension(){
-        return "dimensioni:" . $this->dimensioni;
-    }
-
-    public function getHouseMaterials(){
-        return "Materiali:" . $this->materiali;
+    public function print(){
+        return "<span>" . "dimensioni:" . $this->dimensioni . "</span>" . " " . "<span>" . "Materiali:" . $this?->materiali . "</span>";
     }
 
 }
