@@ -1,5 +1,5 @@
 <?php
-class Categoria {
+class Category {
 
     public $nome;
     public $icona;
@@ -11,5 +11,7 @@ class Categoria {
       $this->icona = $icona;
       
     }
+
+    
 
 }
