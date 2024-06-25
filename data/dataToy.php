@@ -1,16 +1,16 @@
 <?php
-class Toy extends Prodotto {
+class Toy extends Prodotto
+{
 
-    public function __construct(Category $category,$nome,$price,public $alimentazione, public $materiali)
+    public function __construct(Category $category, $nome, $price, public $alimentazione, public $materiali)
     {
-        parent::__construct($category,$nome,$price);
-      $this->alimentazione = $alimentazione;
-      $this->materiali = $materiali;
-      
+        parent::__construct($category, $nome, $price);
+        $this->alimentazione = $alimentazione;
+        $this->materiali = $materiali;
     }
 
-    public function print(){
+    public function print()
+    {
         return "<span>" . "Alimentazione:" . $this->alimentazione . "</span>" .  " " . "<span>" . "Materiali:" . $this->materiali . "</span>";
     }
-
 }
