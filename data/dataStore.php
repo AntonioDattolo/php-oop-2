@@ -19,9 +19,7 @@ $catalogo = [
     new Toy($cats, "Pallina", "7.99", "//", "spugna"),
     new Food($cats, "Integratore", "12.55", "45g", "A+"),
 ];
-
-$buy = new Carrello("");
-
+$buy = new Carrello(null);
 $users = [
     new User("Prince", "123456", $buy)
 ];

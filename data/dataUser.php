@@ -4,9 +4,9 @@ class User
 {
     public $nickname;
     public $password;
-    public $carrello;
+    public $carrello ;
 
-    public function __construct($nickname,$password,Carrello $carrello)
+    public function __construct($nickname,$password,Carrello $carrello = null)
     {
         $this->nickname = $nickname;
         $this->password = $password;
@@ -19,13 +19,14 @@ class User
 }
 
 class Carrello{
-    public $carrello ;
+    public $carrello = [] ;
     public function __construct($carrello)
     {
         $this->carrello = $carrello;
     }
-    public function add($item){
-       $this->carrello = $item ;  
+    public function add($item)
+    {
+        $this->carrello = $item;
     }
     
 }

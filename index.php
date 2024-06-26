@@ -1,6 +1,5 @@
 <?php
 include __DIR__ . "/data/dataStore.php";
-$index = array_key_exists('add', $_GET) ? intval($_GET['add'])  : '';
 $ship = 6.47;
 ?>
 
@@ -49,13 +48,16 @@ $ship = 6.47;
                             <button type="submit" style="background-color: black; color: greenyellow" name="add" value="<?= $i ?>">
                                 Add To Cart
                             </button>
-
                         </div>
                     </div>
                 </form>
             <?php } ?>
             <h2 class="text-center col-12 my-4">Cart</h2>
-            <?php $buy->add($catalogo[$index]) ?>
+            
+            <?php
+            if($index = array_key_exists('add', $_GET) ? intval($_GET['add'])  : '')
+                 $buy->add($catalogo[$index]) 
+             ?>
             <?php foreach ($users as $i => $item) { ?>
             <table class="my-5 bg-transparent w-100 myCard">
                 <thead>
